@@ -1,0 +1,30 @@
+{
+  "name": "my-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-compile": "npm run scss-compile",
+    "scss-compile": "node-sass -rw docs/scss -o docs/css",
+    "watch": "npm run scss-compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterbanfi/Hannah.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterbanfi/Hannah/issues"
+  },
+  "homepage": "https://github.com/peterbanfi/Hannah#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "scss-compile": "^0.1.7"
+  }
+}

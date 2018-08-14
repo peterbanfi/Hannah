@@ -24,13 +24,12 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: #888;
+    &:hover {
+        background: #555;
+    }
 }
 
 /* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
 
 .wrapper {
     /*  */
@@ -94,16 +93,14 @@ body {
     align-items: center;
     color: whitesmoke;
     transform: rotate(180deg);
-}
-
-.main-container .title {
-    color: whitesmoke;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: rgb(59, 0, 114);
-}
-
-.main-container .content {
-    color: rgb(59, 0, 114);
+    .title {
+        color: whitesmoke;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: rgb(59, 0, 114);
+    }
+    .content {
+        color: rgb(59, 0, 114);
+    }
 }
 
 .bg-container {
@@ -117,34 +114,31 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.bg-container:before {
-    position: absolute;
-    content: '';
-    height: 600px;
-    background-color: #fff;
-    width: 120%;
-    top: -400px;
-    left: -240px;
-    transform: rotate(8deg);
-}
-
-.bg-container:after {
-    position: absolute;
-    content: '';
-    height: 600px;
-    background-color: #fff;
-    width: 120%;
-    bottom: -400px;
-    left: -240px;
-    transform: rotate(8deg);
-}
-
-.bg-container .title {
-    color: whitesmoke;
-    font-size: 66px;
-    text-shadow: 12px -12px 2px #FC02BF;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 600px;
+        background-color: #fff;
+        width: 120%;
+        top: -400px;
+        left: -240px;
+        transform: rotate(8deg);
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        height: 600px;
+        background-color: #fff;
+        width: 120%;
+        bottom: -400px;
+        left: -240px;
+        transform: rotate(8deg);
+    }
+    .title {
+        color: whitesmoke;
+        font-size: 66px;
+        text-shadow: 12px -12px 2px #FC02BF;
+    }
 }
 
 .join {
@@ -165,6 +159,13 @@ body {
     position: relative;
     border: 0;
     transition: all 1s;
+    &:before {
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20;
+        background-color: black;
+    }
 }
 
 .frame-one {
@@ -200,31 +201,33 @@ body {
         text-align: center;
         letter-spacing: 1px;
     }
-    .bg-container:before {
-        position: absolute;
-        content: '';
-        height: 200px;
-        background-color: #fff;
-        width: 120%;
-        top: -100px;
-        left: -40px;
-        transform: rotate(8deg);
-    }
-    .bg-container:after {
-        position: absolute;
-        content: '';
-        height: 200px;
-        background-color: #fff;
-        width: 120%;
-        bottom: -100px;
-        left: -40px;
-        transform: rotate(8deg);
-    }
-    .bg-container .title {
-        text-align: center;
-        color: whitesmoke;
-        font-size: 46px;
-        font-weight: 600;
-        text-shadow: 12px -12px 2px #FC02BF;
+    .bg-container {
+        &:before {
+            position: absolute;
+            content: '';
+            height: 200px;
+            background-color: #fff;
+            width: 120%;
+            top: -100px;
+            left: -40px;
+            transform: rotate(8deg);
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            height: 200px;
+            background-color: #fff;
+            width: 120%;
+            bottom: -100px;
+            left: -40px;
+            transform: rotate(8deg);
+        }
+        .title {
+            text-align: center;
+            color: whitesmoke;
+            font-size: 46px;
+            font-weight: 600;
+            text-shadow: 12px -12px 2px #FC02BF;
+        }
     }
 }
