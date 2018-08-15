@@ -6,15 +6,17 @@
         const frameOne = document.querySelector('.frame-one');
         const frameTwo = document.querySelector('.frame-two');
 
-        btn.addEventListener("mouseover", setEffect());
-        btn.addEventListener("onmouseout", resetEffect());
+        btn.addEventListener("mouseenter", setEffect);
+        btn.addEventListener("mouseleave", resetEffect);
 
         function setEffect() {
-            console.log('mouseover!');
+            frameOne.classList.add('move-frame-one');
+            frameTwo.classList.add('move-frame-two');
         }
 
         function resetEffect() {
-            console.log('onmouseout!');
+            frameOne.classList.remove('move-frame-one');
+            frameTwo.classList.remove('move-frame-two');
         }
     });
 }.bind({})());

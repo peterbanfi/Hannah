@@ -155,6 +155,15 @@ body {
     align-items: center;
 }
 
+.button:active,
+.button:focus,
+.button.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 .button {
     width: 300px;
     height: 60px;
@@ -164,27 +173,41 @@ body {
     letter-spacing: 1px;
     position: relative;
     border: 0;
-    transition: all 1s;
+    font-weight: bold;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .frame-one {
     position: absolute;
-    content: '';
-    top: 5px;
-    left: 5px;
+    top: 0;
+    left: 0;
     height: 60px;
     width: 300px;
     border: 2px solid black;
+    transition: all 0.6s;
+}
+
+.move-frame-one {
+    top: 5px;
+    left: 5px;
 }
 
 .frame-two {
     position: absolute;
-    content: '';
-    bottom: 5px;
-    right: 5px;
+    bottom: 0;
+    right: 0;
     height: 60px;
     width: 300px;
     border: 2px solid black;
+    transition: all 0.6s;
+}
+
+.move-frame-two {
+    bottom: 5px;
+    right: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -226,5 +249,17 @@ body {
         font-size: 46px;
         font-weight: 600;
         text-shadow: 12px -12px 2px #FC02BF;
+    }
+    .button {
+        width: 260px;
+        height: 50px;
+    }
+    .frame-one {
+        width: 260px;
+        height: 50px;
+    }
+    .frame-two {
+        width: 260px;
+        height: 50px;
     }
 }
