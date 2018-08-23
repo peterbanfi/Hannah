@@ -8,6 +8,11 @@
         saepe maiores temporibus perspiciatis rerum accusantium autem. Quas culpa, neque animi quaerat provident delectus
         fugiat.
       </div>
+      <button routerLink="/about" class="button title-btn" (mouseover)="move='move-frame-one'" (mouseout)="move=''" (mouseover)="move2='move-frame-two'"
+        (mouseout)="move2=''">
+        <div class="frames frame-one title-frame" [ngClass]="move"></div>
+        <div class="frames frame-two title-frame" [ngClass]="move2"></div>
+        About Hannah</button>
     </div>
   </div>
   <div class="main-content">

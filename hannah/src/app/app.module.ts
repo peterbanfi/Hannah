@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ParticlesModule } from 'angular-particle';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
